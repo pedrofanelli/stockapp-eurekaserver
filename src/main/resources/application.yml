@@ -4,4 +4,3 @@ spring:
     name: stockapp-eurekaserver
   config:
     import: configserver:http://localhost:8071
-
