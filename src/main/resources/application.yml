@@ -2,5 +2,6 @@
 spring:
   application:
     name: stockapp-eurekaserver
-  config:
-    import: configserver:http://localhost:8071
+  #config:
+    #import: ${EXT_CONFIG_URL}
+# url agregado como propiedad en Run As: Run Configurations... como si fuera una propiedad establecida al inicio
