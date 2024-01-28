@@ -16,16 +16,17 @@ import org.springframework.web.client.RestTemplate;
  * 
  * Esta clase afectará todos los RestTemplate que se inicialicen al INICIARSE la app, solo en ese momento.
  * It affects all RestTemplate instances created during the bootstrap phase
+ * 
+ * Sin embargo, es mejor el link, porque podemos tenerlo en un lugar seguro, inyectar variables static no pude hacerlo
  */
 public class CustomBootstrapRegistryInitializer implements BootstrapRegistryInitializer {
 
+	
 	@Override
 	public void initialize(BootstrapRegistry registry) {
 		registry.register(RestTemplate.class, context -> {
 			RestTemplate restTemplate = new RestTemplate();
 			// Customize RestTemplate here
-			
-			System.out.println("HOLA HOLAAAA");
 			
 			restTemplate.setRequestFactory(customClientHttpRequestFactory());
 			
