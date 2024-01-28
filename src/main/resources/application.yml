@@ -5,10 +5,3 @@ spring:
   config:
     import: configserver:http://localhost:8071
 
-#spring.application.name=stockapp-eurekaserver
-
-#spring.config.import=optional:file:.env[.properties]
-#spring.config.import=configserver:http://localhost:8071
-#spring.config.import=configserver:http://configuracion:8071
-
-
